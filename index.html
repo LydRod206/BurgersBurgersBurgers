@@ -4,27 +4,25 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- link css -->
+    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0">
+    <link rel="stylesheet" href="./skeleton.css">
+    <link rel="stylesheet" href="./assets/style.css">
     <title>BOBS BURGERS INFO</title>
 </head>
-<body>
-<section class="Front-Page-Top">
-    <card class="title-area">
-    <h1 id="Title">Lets Get This Party Started!</h1>
+<body> 
+    <div class="content-box">
+    <section class="Front-Page-Top">
+   <card class="title-area">
+    <h1 id="firstTitle">BOB's BURGERS</h1>
     </card>
     <card class="Generate-btn-area">
         <div>
-            <button id="Generate-btn">Generate</button>
+            <button id="Generate-btn">Generate Random Character</button>
         </div>
     </card>
-</section>
-<section class="Burger-OTD-Generator">
-    <p id="Burger-Sign">Burger Of The Day</p>
-    <P id="burger"></P>
-    <button id="BurgerBTN">Generate Burger Of The Day</button>
-</section>
-<section class="Generated-char-Info">
+        </section>
+    <div id="Character">
+        <!-- <section class="Generated-char-Info">
     <card class="character-info">
         <h1 id="char-info">Character Info</h1>
         <p id="Name"></p>
@@ -33,7 +31,28 @@
         <P id="VoiceA"></P>
         <img src="" alt="">
     </card>
+</section> -->
+</div>
+    
+<section class="Burger-OTD-Generator">
+    <h1 id="secondTitle">LETS GET THIS PATTY STARTED!</h1>
+     <div>
+        <button id="BurgerBTN">Generate A Burger Of The Day</button>
+    </div>
+    <div id="recipe">
+               <!-- <section class="Generated-burger-Info">
+    <card class="burger-info">
+        <h1 id="burg-info">Burger Recipe</h1>
+        <p id="Name"></p>
+        <p id=""></p>
+        <p id=""></p>
+        <P id=""></P>
+        <img src="" alt="">
+    </card>
+</section> --> 
+    </div>
 </section>
-<!-- link javascript -->
+    </div>
+<script src="assets/script.js"></script>
 </body>
 </html>
