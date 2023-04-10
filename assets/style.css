@@ -1,0 +1,119 @@
+
+body {
+    background-image: url("./bob-s-burgers-zoom-background-lv6r7fn40m79ajrz.jpg");
+    background-repeat: no-repeat;
+    height: 100%vh;
+}
+
+.content-box {
+    columns: 2;
+}
+
+#firstTitle, #secondTitle {
+    font-size: 35px;
+    animation: pulsate 1.5s infinite alternate;  
+    border: 0.2rem solid #fff;
+    border-radius: 2rem;
+    padding: 0.4em;
+    box-shadow: 0 0 .2rem #fff,
+              0 0 .2rem #fff,
+              0 0 2rem red,
+              0 0 0.8rem red,
+              0 0 2.8rem red,
+              inset 0 0 1.3rem red; 
+    background-color: rgb(247, 247, 67);
+    width: 500px;
+    margin-left: 150px;
+ }
+ #firstTitle {
+    margin-top: 2px;
+    height: 50px;
+ }
+ #secondTitle {
+    width: 600px;
+    height:50px;
+ }
+
+ .Front-Page-Top, .Burger-OTD-Generator  {
+    animation: flicker 2.5s infinite alternate;
+    color: red;
+    text-align: center; 
+    
+}
+
+#Generate-btn, #BurgerBTN { 
+    font-size: 25px;  
+    border: 0.2rem solid #fff;
+    border-radius: 2rem;
+    padding: 0.4em;  
+    box-shadow: 0 0 .2rem #fff,
+              0 0 .2rem #fff,
+              0 0 2rem red,
+              0 0 0.8rem red,
+              0 0 2.8rem red,
+              inset 0 0 1.3rem red;    
+    background-color: rgb(247, 247, 67);   
+    color: red; 
+    margin-right: 60px;       
+}
+
+#Generate-btn {
+    margin-right: 100px;
+}
+
+#BurgerBTN {
+    margin-left: 50px;
+}
+
+@keyframes flicker {
+    0%, 18%, 22%, 25%, 53%, 57%, 100% {
+      text-shadow:
+        0 0 4px #fff,
+        0 0 11px #fff,
+        0 0 19px #fff,
+        0 0 40px red,
+        0 0 80px red,
+        0 0 90px red,
+        0 0 100px red,
+        0 0 150px rgb(240, 36, 36);
+    }
+    20%, 24%, 55% {       
+      text-shadow: none;
+    }
+
+}
+
+#Character, #recipe {
+    width: 600px;
+    height: 600px;
+    background-color: rgb(247, 247, 67);
+    opacity: .7;
+    margin-top: 70px;
+    box-shadow: 0 0 .2rem #fff,
+              0 0 .2rem #fff,
+              0 0 2rem red,
+              0 0 0.8rem red,
+              0 0 2.8rem red,
+              inset 0 0 1.3rem red; 
+ } 
+ #Character {
+    margin-left: 120px;
+ }
+
+ #recipe {
+    margin-left: 170px;
+ }
+
+
+
+/* tablet */
+
+    /* @media screen and (min-width: 769px)  { */
+
+/* }  
+
+ /* phone */
+
+ /* @media screen and (max-width: 768px) { 
+
+ }  */
