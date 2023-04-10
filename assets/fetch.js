@@ -1,1 +1,0 @@
-let response = fetch("https://www.bobsburgersapi.com/");

@@ -1,5 +1,5 @@
-const characterAPI = //API INFORMATION
-const burgerAPI = //API INFORMATION
+const characterAPI = "https://bobsburgers-api.herokuapp.com/characters/limit=9&skip=70";
+//const burgerAPI = API INFORMATION
 
 const titleEl = document.getElementById("title");
 const burgerSignEl = document.getElementById("burger-sign");
