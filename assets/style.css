@@ -1,19 +1,39 @@
-
-body {
+p {
+    line-height: 1.6em;
+  }
+ body{
     background-image: url("./bob-s-burgers-zoom-background-lv6r7fn40m79ajrz.jpg");
-    background-repeat: no-repeat;
-    height: 100%vh;
-}
+    background-size: cover;
+    background-repeat: no-repeat; 
+    height: 100%; 
+    background-color: black;
+  }  
 
-.content-box {
-    columns: 2;
-}
+  .container {
+    display: flex;
+    flex-direction: row;
+    margin-left: 200px;
+    margin-top: 40px;
+    margin-bottom: 5px;
+    
+  }
 
-#firstTitle, #secondTitle {
-    font-size: 35px;
+  .container__col-1 {
+    width: auto;
+  
+
+  }
+
+  .container__col-2 {
+    width: auto;
+
+  }
+
+ #firstTitle, #secondTitle {
+   font-size: 40px;
     animation: pulsate 1.5s infinite alternate;  
     border: 0.2rem solid #fff;
-    border-radius: 2rem;
+   color: red;
     padding: 0.4em;
     box-shadow: 0 0 .2rem #fff,
               0 0 .2rem #fff,
@@ -21,28 +41,23 @@ body {
               0 0 0.8rem red,
               0 0 2.8rem red,
               inset 0 0 1.3rem red; 
-    background-color: rgb(247, 247, 67);
-    width: 500px;
-    margin-left: 150px;
- }
- #firstTitle {
-    margin-top: 2px;
-    height: 50px;
- }
- #secondTitle {
-    width: 600px;
-    height:50px;
- }
-
- .Front-Page-Top, .Burger-OTD-Generator  {
-    animation: flicker 2.5s infinite alternate;
-    color: red;
-    text-align: center; 
-    
+    background-color: rgb(247, 247, 67);  
+    text-align: center;
+    width: 460px;
+    margin-left: 100px;
+} 
+#firstTitle {
+    margin-top: 40px;
+    margin-right: 150px;
+ 
+}
+#secondTitle {
+    margin-top: 30px;
+  
 }
 
-#Generate-btn, #BurgerBTN { 
-    font-size: 25px;  
+#Generate-btn, #BurgerBTN, #saveBTN { 
+    font-size: 35px;  
     border: 0.2rem solid #fff;
     border-radius: 2rem;
     padding: 0.4em;  
@@ -53,18 +68,25 @@ body {
               0 0 2.8rem red,
               inset 0 0 1.3rem red;    
     background-color: rgb(247, 247, 67);   
-    color: red; 
-    margin-right: 60px;       
-}
+    color: red;  
+    flex-wrap: wrap;
+} 
 
 #Generate-btn {
-    margin-right: 100px;
+    font-size: 35px;
+    margin-left: 90px;
+    width: 500px;
 }
 
 #BurgerBTN {
-    margin-left: 50px;
+    font-size: 35px;
+    width: 550px;
+    margin-left: 40px;
 }
 
+#saveBTN {
+    font-size: 25px;
+}
 @keyframes flicker {
     0%, 18%, 22%, 25%, 53%, 57%, 100% {
       text-shadow:
@@ -83,37 +105,157 @@ body {
 
 }
 
-#Character, #recipe {
-    width: 600px;
-    height: 600px;
+#Character, #recipe { 
+    height: 300px; 
+    width:300px;
     background-color: rgb(247, 247, 67);
-    opacity: .7;
-    margin-top: 70px;
+    opacity: .7; 
+    margin-top: 10px; 
     box-shadow: 0 0 .2rem #fff,
               0 0 .2rem #fff,
               0 0 2rem red,
               0 0 0.8rem red,
               0 0 2.8rem red,
-              inset 0 0 1.3rem red; 
- } 
- #Character {
-    margin-left: 120px;
- }
+              inset 0 0 1.3rem red;   
+}
+#recipe {
+   margin-left: 200px;
+   margin-bottom: 30px;
+}
 
- #recipe {
-    margin-left: 170px;
- }
-
+#Character {
+    margin-bottom: 30px;
+    margin-left:200px;
+}
 
 
 /* tablet */
+@media screen and (max-width:820px) {
+    .container {
+        margin-left: 65px;
+        margin-top: 35px;
+        flex-direction: column;
+        margin-bottom: 65px;
+    }
+    
+    .container__col-1{ 
+        width: auto;
+     }
+     .container__col-2{
+        width: auto;
+     }
+     #recipe { 
+       width: 300px;
+       height: 300px;
+       margin-bottom: 30px;
+       margin-left:200px;
+        }
+    #Character {
+        width: 300px;
+        height: 300px;
+        margin-bottom: 25px;
+        margin-left: 200px;
+        }
+    
+    #firstTitle, #secondTitle {
+        font-size: 30px;
+        width: 350px;
+        margin-left: 150px;
+        
+}
+#firstTitle {
+    margin-top: 30px;
+    margin-bottom: 30px;
+    margin-right: 0;
+}
+    #secondTitle {
+        margin-top: 50px;
+        width:350px;
+        margin-bottom: 30px;
+        
+    }
+    #Generate-btn { 
+        font-size: 20px; 
+       margin-left: 180px;
+        width: 300px;
+        margin-bottom: 30px;
+       } 
+    #BurgerBTN {
+       font-size: 20px;
+       width: 300px;
+       margin-left: 120px;
+    }
+    #saveBTN {
+        font-size: 20px;
+        width: 100px;
+    }
+}
 
-    /* @media screen and (min-width: 769px)  { */
 
-/* }  
 
- /* phone */
+/* phone */
+@media screen and (max-width: 768px){ 
+    .container{
+        margin-left: 25px;
+        margin-top: 10px;
+        flex-direction: column;
+        margin-bottom: 10px;
+       
+    }
+ .container__col-1{ 
+       width: auto;
+    }
+    .container__col-2{
+       width: auto;
+    } 
 
- /* @media screen and (max-width: 768px) { 
-
- }  */
+     #recipe { 
+       width: 200px;
+       height: 200px;
+       margin-bottom: 20px;
+       margin-left: 75px;
+       
+        }
+    #Character {
+        width: 200px;
+        height: 200px;
+        margin-bottom: 20px;
+        margin-left: 75px;
+        }
+    
+    #firstTitle, #secondTitle {
+        font-size: 27px;
+        width: 250px;
+        margin-left: 30px;      
+}
+    #firstTitle {
+        margin-top: 15px;
+        margin-bottom: 20px;
+        margin-right: 0;
+}
+    #secondTitle {
+        margin-top: 10px;
+        width:250px;
+        margin-bottom: 20px;
+      
+    }
+    #Generate-btn { 
+        font-size: 20px; 
+        margin-left: 15px;
+        width: 300px;
+        margin-bottom: 20px;
+       } 
+    #BurgerBTN {
+       font-size: 20px;
+       width: 300px;
+       margin-left: 15px;
+       margin-bottom: 10px;
+      
+    }
+    #saveBTN {
+        font-size: 20px;
+        width: 100px;
+        margin-left: 120px;
+        margin-top: 5px;
+    }
+}
