@@ -16,7 +16,7 @@ const ageEl = document.getElementById("age")
 const firstEpEl = document.getElementById("FirstEP");
 const voiceEl = document.getElementById("VoiceA");
 
-//FUNCTIONS
+// //FUNCTIONS
 
 function generateBurgeroftheDay(){
     fetch(burgerAPI).then(function(response){
