@@ -35,7 +35,7 @@ function generateBurgeroftheDay(){
         burgerNameEl.textContent = burgerName;
         ingredientsEl.textContent = ingredients;
         descriptionEl.textContent = description;
-        imageEl.setAttribute = ("src", image);
+        imageEl.setAttribute("src", image);
 
     }); 
 
