@@ -11,48 +11,49 @@
     <title>BOBS BURGERS INFO</title>
 </head>
 <body> 
-    <div class="container">
-        <div id="container__col-1">
-            <div class="box">
-                 <h3 id="firstTitle">BOB's BURGERS</h3>
-                    <div id="Character">
-                         <div class="Generated-char-Info">
-                            <div class="character-info">
-                                <img class="pure-img" src="" alt="">
-                                <p id="Name"></p>
-                                <p id="age"></p>
-                                <p id="FirstEP"></p>
-                                <P id="VoiceA"></P>
-                            </div>
-                        </div>
-                    </div>
-                        <div class="Generate-btn-area">
-                            <button id="Generate-btn"class="pure-button" >Generate Random Character</button>
-                        </div>
-                    </div>
-                </div> 
-                    <div id="container__col-2">
-                        <div class="box">
-                            <h3 id="secondTitle">LETS GET THIS PATTY STARTED!</h3>
-                                 <div id="recipe">
-                                     <div class="Generated-burger-Info">
-                                        <div class="burger-info">
-                                           <p id="burg-info"></p>
-                                            <img class=pure-img src="" alt="">
-                                            <p id="Name"></p>
-                                            <p id=""></p>
-                                            <p id=""></p>
-                                            <P id=""></P>  
-                                        </div> 
-                                    </div>
-                                </div>
-                            <div class="Generate-btn-area">
-                                <button id="BurgerBTN" class="pure-button">Generate A Burger Of The Day</button>
-                                     <button id="saveBTN" class="pure-button">SAVE</button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                <script src="./assets/JavaScript/script.js"></script>
-            </body>
-        </html>
+    <div id="content-box">
+    <section id="Front-Page-Top">
+   <card id="title-area">
+    <h1 id="firstTitle">BOB's BURGERS</h1>
+    </card>
+    <card id="Generate-btn-area">
+        <div>
+            <button id="Generate-btn">Generate Random Character</button>
+        </div>
+    </card>
+        </section>
+    <div id="Character">
+        <!-- <section class="Generated-char-Info">
+    <card class="character-info">
+        <h1 id="char-info">Character Info</h1>
+        <p id="Name"></p>
+        <p id="age"></p>
+        <p id="FirstEP"></p>
+        <P id="VoiceA"></P>
+        <img src="" alt="">
+    </card>
+</section> -->
+</div>
+    
+<section id="Burger-OTD-Generator">
+    <h1 id="secondTitle">LETS GET THIS PATTY STARTED!</h1>
+     <div>
+        <button id="BurgerBTN">Generate A Burger Of The Day</button>
+    </div>
+    <div id="recipe">
+               <!-- <section class="Generated-burger-Info">
+    <card class="burger-info">
+        <h1 id="burg-info">Burger Recipe</h1>
+        <p id="Burger Name"></p>
+        <p id="Ingredients"</p>
+        <p id="Description"</p>
+        <P id="Image"</P>
+        <img src="" alt="">
+    </card>
+</section> --> 
+    </div>
+</section>
+    </div>
+<script src="./assets/JavaScript/fetch.js"></script>
+</body>
+</html>
