@@ -7,6 +7,18 @@ As a Fan of Bobs Burgers, I want to find an Episode and figure out what Burger t
 ## Project Description
 Bob's Burger and some Burgers makes use of two APIs a burger API and a character API. We retrieve elements from the HTML using getElementById() method and have two main functions called generateBurgerof the Day() and generateCharInfo(). These functions both use the fetch() method. We retrieve data from the API endpoints and then parse with JSON. We create a random Index using Math.random(), and then we update the HTML elements. We use addEventListener() method to allow users to press buttons to generate new data.
 
+Features we hope to implement in the future include picking a favorite burger and saving it for later.
+
+# How to Run the project
+Bob'b Buger and some Burgers can me found here:
+
+# How to Use the Project
+"Let's get this Patty Started!" Press Generate Random Character button to find out who our cool person is today and then Press Generate A Burger Of The Day button to find out what awesome burger we are making to eat!
+
+# Authors
+https://github.com/roberto189
+https://github.com/CodingTrophyWife
+https://github.com/LydRod206
 
 
 
