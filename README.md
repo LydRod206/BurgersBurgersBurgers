@@ -1,10 +1,11 @@
 ### BurgersBurgersBurgers
 Bob's Burger and some Burgers 
 
-## USER STORY
+## User Story
 As a Fan of Bobs Burgers, I want to find an Episode and figure out what Burger they are eating, so that I may make and eat the same burger.
 
-
+## Project Description
+Bob's Burger and some Burgers makes use of two APIs a burger API and a character API. We retrieve elements from the HTML using getElementById() method and have two main functions called generateBurgerof the Day() and generateCharInfo(). These functions both use the fetch() method. We retrieve data from the API endpoints and then parse with JSON. We create a random Index using Math.random(), and then we update the HTML elements. We use addEventListener() method to allow users to press buttons to generate new data.
 
 
 
