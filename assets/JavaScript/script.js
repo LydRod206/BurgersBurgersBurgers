@@ -10,7 +10,7 @@ const ingredientsEl = document.getElementById("Ingredients");
 const descriptionEl = document.getElementById("Description");
 const imageEl = document.getElementById("Image");
 const charInfoEl = document.getElementById("char-info");
-const charBtnEl = document.getElementById("char-btn");
+const charBtnEl = document.getElementById("character-btn");
 const nameEl = document.getElementById("Name");
 const ageEl = document.getElementById("age")
 const firstEpEl = document.getElementById("FirstEP");
@@ -51,7 +51,7 @@ function generateCharInfo(){
 
     const randomIndex = Math.floor(Math.random() * data.length);
         const character = data[randomIndex];
-        const Name = character.Name;
+        const Name = character.name;
         const age = character.age;
         const FirstEP = character.FirstEP;
         const VoiceA = character.VoiceA;
@@ -63,5 +63,5 @@ function generateCharInfo(){
     });    
 }
 
-burgerBtnEl.addEventListener("click", generateBurgeroftheDay);
-charBtnEl.addEventListener("click", generateCharInfo);
+burgerBtnEl.addEventListener("click", generateBurgeroftheDay());
+charBtnEl.addEventListener("click", generateCharInfo());
