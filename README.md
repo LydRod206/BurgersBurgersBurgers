@@ -5,7 +5,7 @@ Bob's Burger and some Burgers
 As a Fan of Bobs Burgers, I want to find an Episode and figure out what Burger they are eating, so that I may make and eat the same burger.
 
 ## Project Description
-Bob's Burger and some Burgers makes use of two APIs a burger API and a character API. We retrieve elements from the HTML using getElementById() method and have two main functions called generateBurgerof the Day() and generateCharInfo(). These functions both use the fetch() method. We retrieve data from the API endpoints and then parse with JSON. We create a random Index using Math.random(), and then we update the HTML elements. We use addEventListener() method to allow users to press buttons to generate new data.
+Bob's Burger and some Burgers makes use of two APIs a burger API and a character API. We retrieve elements from the HTML using getElementById() method and have two main functions called generateBurgerof the Day() and generateCharInfo(). These functions both use the fetch() method. We retrieve data from the API endpoints and then parse with JSON. We create a random Index using Math.random(), and then we update the HTML elements. We use addEventListener() method to allow users to press buttons to generate new data. For the beautification of the page we are using the CSS framework 'Pure'.
 
 Features we hope to implement in the future include picking a favorite burger and saving it for later.
 
@@ -20,27 +20,11 @@ https://github.com/roberto189
 https://github.com/CodingTrophyWife
 https://github.com/LydRod206
 
+# APIs
+https://burgerservice20230409143907.azurewebsites.net/burger/Burgers
+https://bobsburgers-api.herokuapp.com/characters/?limit=9&skip=70
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-##License 
-
+# License 
 
 Copyright (c) 2018 Zach Saucier
 
