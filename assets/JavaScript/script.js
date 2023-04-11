@@ -13,7 +13,10 @@ const firstEpEl = document.getElementById("first-ep");
 const voiceEl = document.getElementById("voice");
 
 //FUNCTIONS
+function rndchar(){
+    
 
+}
 burgerBtnEl.addEventListener("click, generateBurgeroftheDay");
 charBtnEl.addEventListener("click, generateCharInfo");
 
