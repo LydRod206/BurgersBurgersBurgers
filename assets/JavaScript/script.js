@@ -1,5 +1,5 @@
-const characterAPI = "https://bobsburgers-api.herokuapp.com/characters/limit=9&skip=70";
-const burgerAPI =  "https://burgerservice20230409143907.azurewebsites.net/burger/Burgers";
+var characterAPI = "https://bobsburgers-api.herokuapp.com/characters/limit=9&skip=70";
+var burgerAPI =  "https://burgerservice20230409143907.azurewebsites.net/burger/Burgers";
 
 const titleEl = document.getElementById("title");
 const burgerSignEl = document.getElementById("burger-sign");
@@ -31,7 +31,6 @@ function generateBurgeroftheDay(){
         const description = burger.description;
         const image = burger.image;
 
-        burgerEl.textContent = burgerName;
         burgerNameEl.textContent = burgerName;
         ingredientsEl.textContent = ingredients;
         descriptionEl.textContent = description;
@@ -41,7 +40,7 @@ function generateBurgeroftheDay(){
 
     }
 
-
+document.addEventListener("DOMContentLoaded", () => {
 function generateCharInfo(){
     fetch(characterAPI).then(function(response){
         return response.json ();
@@ -62,6 +61,6 @@ function generateCharInfo(){
         voiceEl.textContent = VoiceA; 
     });    
 }
-
+});
 burgerBtnEl.addEventListener("click", generateBurgeroftheDay);
 charBtnEl.addEventListener("click", generateCharInfo);
