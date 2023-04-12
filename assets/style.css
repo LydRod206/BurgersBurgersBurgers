@@ -34,11 +34,11 @@ body{
     width: auto;
 }
 
-#firstTitle, #secondTitle {
-    font-size: 50px;
-    animation: flicker 3.0s infinite alternate;
+ #firstTitle, #secondTitle {
+   font-size: 50px;
+    animation: flicker 3.0s infinite alternate;  
     border: 0.2rem solid red;
-    color: red;
+   color: red;
     padding: 0.4em;
     background-color: rgb(247, 247, 67);  
     text-align: center;
@@ -62,9 +62,9 @@ body{
     border-radius: 2rem;
     padding: 0.4em;  
     background-color: rgb(247, 247, 67);   
-    color: red; 
-    margin-right: 60px;       
-}
+    color: red;  
+    flex-wrap: wrap;
+} 
 
 #Generate-btn {
     font-size: 35px;
