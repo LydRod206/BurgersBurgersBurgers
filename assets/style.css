@@ -1,4 +1,4 @@
-* {
+h3 {
     font-family: 'bobs_burgersregular';
     src: url('bobs_burgers-webfont.woff2') format('woff2'),
     url('bobs_burgers-webfont.woff') format('woff');
@@ -32,6 +32,7 @@ body{
 
 .container__col-2 {
     width: auto;
+    text-align: center;
 }
 
  #firstTitle, #secondTitle {
@@ -56,7 +57,7 @@ body{
     margin-top: 30px;
 }
 
-#Generate-btn, #BurgerBTN, #saveBTN { 
+#character-btn, #burger-btn, #save-btn { 
     font-size: 35px;  
     border: 0.2rem solid red;
     border-radius: 2rem;
@@ -66,22 +67,24 @@ body{
     flex-wrap: wrap;
 } 
 
-#Generate-btn {
+#character-btn {
     font-size: 35px;
     margin-left: 90px;
     width: 500px;
 }
 
-#BurgerBTN {
+#burger-btn {
     font-size: 35px;
     width: 550px;
     margin-left: 40px;
 }
 
-#saveBTN {
+
+#save-btn {
     font-size: 25px;
     width: 150px;
 }
+
 
 @keyframes flicker {
     0%, 18%, 22%, 25%, 53%, 57%, 100% {
@@ -102,10 +105,9 @@ body{
 }
 
 #Character, #recipe {
-    width: 300px;
-    height: 300px;
+    width: 500px;
+    height: 400px;
     background-color: rgb(247, 247, 67);
-    opacity: .7;
     margin-top: 10px;
     box-shadow: 0 0 .2rem #fff,
               0 0 .2rem #fff,
@@ -116,13 +118,18 @@ body{
 } 
 
 #recipe {
-    margin-left: 200px;
+    margin-left: 100px;
     margin-bottom: 30px;
+    background-color: rgb(247, 247, 67);
+    text-align: center;
 }
+
+
  
 #Character {
      margin-bottom: 30px;
-     margin-left:200px;
+     margin-left:100px;
+     text-align: center;
 }
 
 
@@ -177,20 +184,20 @@ body{
         margin-bottom: 30px; 
         }
 
-    #Generate-btn { 
+    #character-btn { 
         font-size: 30px; 
         margin-left: 180px;
         width: 350px;
         margin-bottom: 30px;
        } 
 
-    #BurgerBTN {
+    #burger-btn {
        font-size: 30px;
        width: 350px;
        margin-left: 120px;
     }
 
-    #saveBTN {
+    #save-btn {
         font-size: 30px;
         width: 100px;
     }
@@ -247,21 +254,21 @@ body{
         margin-bottom: 20px;
     }
 
-    #Generate-btn { 
+    #character-btn { 
         font-size: 25px; 
         margin-left: 15px;
         width: 300px;
         margin-bottom: 20px;
     } 
 
-    #BurgerBTN {
+    #burger-btn {
        font-size: 25px;
        width: 300px;
        margin-left: 15px;
        margin-bottom: 10px;
     }
 
-    #saveBTN {
+    #save-btn {
         font-size: 25px;
         width: 100px;
         margin-left: 120px;
