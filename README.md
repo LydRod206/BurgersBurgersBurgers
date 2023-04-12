@@ -10,7 +10,7 @@ Bob's Burger and some Burgers makes use of two APIs a burger API and a character
 Features we hope to implement in the future include picking a favorite burger and saving it for later.
 
 # How to Run the project
-Bob'b Buger and some Burgers can me found here:
+Bob'b Buger and some Burgers can me found here: https://lydrod206.github.io/BurgersBurgersBurgers/
 
 # How to Use the Project
 "Let's get this Patty Started!" Press Generate Random Character button to find out who our cool person is today and then Press Generate A Burger Of The Day button to find out what awesome burger we are making to eat!
@@ -45,3 +45,4 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
+![Screenshot 2023-04-12 at 12 06 14 PM](https://user-images.githubusercontent.com/119384486/231560625-0eaeaf57-188a-4e9c-b1af-a224975182cb.png)
