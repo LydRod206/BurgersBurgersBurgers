@@ -1,15 +1,11 @@
-var characterAPI = "https://bobsburgers-api.herokuapp.com/characters/limit=9&skip=70";
-var burgerAPI =  "https://burgerservice20230409143907.azurewebsites.net/burger/Burgers";
+var characterAPI = "https://bobsburgers-api.herokuapp.com/characters/";
+var burgerAPI =  "https://burgerservice20230409143907.azurewebsites.net/burger/Burgers/";
 
-const burgerNameEl = document.getElementById("Burger-Name");
-const ingredientsEl = document.getElementById("Ingredients");
-const descriptionEl = document.getElementById("Description");
-const imageEl = document.querySelector("#container__col-2 .burger-info img");
-const nameEl = document.getElementById("Name");
-const ageEl = document.getElementById("age")
-const firstEpEl = document.getElementById("FirstEP");
-const voiceEl = document.getElementById("VoiceA");
+// button elements
+const burgerBtnEl = document.getElementById("burger-btn");
+const charBtnEl = document.getElementById("character-btn");
 
+<<<<<<< HEAD
 function generateBurgeroftheDay() {
     fetch(burgerAPI).then(function(response){
         return response.json ();
@@ -25,40 +21,48 @@ function generateBurgeroftheDay() {
         const ingredients = burger.ingredients;
         const description = burger.description;
         const image = burger.image;
+=======
+// character and burger info panels
+const characterInfoPanel = document.getElementById("Character");
+const burgerInfoPanel = document.getElementById("recipe");
+>>>>>>> dev
 
-        burgerNameEl.textContent = burgerName;
-        ingredientsEl.textContent = ingredients;
-        descriptionEl.textContent = description;
-        imageEl.setAttribute("src", image);
-
-    }); 
+// //FUNCTIONS
+async function getapidata(url) {
+    const response = await fetch(url);
+    var data = await response.json();
+    return data;
 }
 
+async function generateBurgeroftheDay(){
+    var random = Math.floor(Math.random() * 10) + 1;
+    const burgerData = await getapidata(burgerAPI + random);
+    console.log(burgerData);
 
-function generateCharacter(){
-    fetch(characterAPI).then(function(response){
-        return response.json ();
-    })
-    .then(function(data){
-        console.log(data)
-
-        const randomIndex = Math.floor(Math.random() * data.length);
-        const character = data[randomIndex];
-        const Name = character.name;
-        const age = character.age;
-        const FirstEP = character.FirstEP;
-        const VoiceA = character.VoiceA;
-
-        nameEl.textContent = Name;
-        ageEl.textContent = age;
-        firstEpEl.textContent = FirstEP;
-        voiceEl.textContent = VoiceA; 
-    });    
+    var burgerHTML = "<img src='" + burgerData.image + "' width='200'/>";
+    burgerHTML += "<h5>" + burgerData.burger_name + "</h5>";
+    burgerHTML += "<p>" + burgerData.description + "</p>";
+    burgerInfoPanel.innerHTML = burgerHTML;
 }
-document.addEventListener("DOMContentLoaded", () => {
-    const burgerBtnEl = document.getElementById("BurgerBTN");
-    const charBtnEl = document.getElementById("Generate-btn");
 
+<<<<<<< HEAD
     burgerBtnEl.addEventListener("click", generateBurgeroftheDay);
     charBtnEl.addEventListener("click", generateCharacter);
 });
+=======
+async function generateCharInfo(){
+    // we want to get a random character from 1 to 506, 506 is the length of characters from the characters api
+    var random = Math.floor(Math.random() * 506) + 1;
+    const characterData = await getapidata(characterAPI + random);
+    console.log(characterData);
+
+    var characterHTML = "<img src='" + characterData.image + "' width='200' height='260'/>";
+    characterHTML += "<p>Name: " + characterData.name + "</p>";
+    characterHTML += "<p>First Episode: " + characterData.firstEpisode + "</p>";
+    characterHTML += "<p>Voiced By: " + characterData.voicedBy + "</p>";
+    characterInfoPanel.innerHTML = characterHTML;
+}
+
+burgerBtnEl.addEventListener("click", generateBurgeroftheDay);
+charBtnEl.addEventListener("click", generateCharInfo);
+>>>>>>> dev
