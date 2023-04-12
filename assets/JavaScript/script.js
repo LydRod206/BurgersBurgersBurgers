@@ -4,6 +4,7 @@ var burgerAPI =  "https://burgerservice20230409143907.azurewebsites.net/burger/B
 // button elements
 const burgerBtnEl = document.getElementById("burger-btn");
 const charBtnEl = document.getElementById("character-btn");
+const saveBtnEl = document.getElementById("save-btn");
 
 // character and burger info panels
 const characterInfoPanel = document.getElementById("Character");
@@ -25,6 +26,12 @@ async function generateBurgeroftheDay(){
     burgerHTML += "<h5>" + burgerData.burger_name + "</h5>";
     burgerHTML += "<p>" + burgerData.description + "</p>";
     burgerInfoPanel.innerHTML = burgerHTML;
+    saveBtnEl.addEventListener("click", function saveBurger(){
+        var savedBurger = burgerHTML;
+        localStorage.setItem("saved burger", savedBurger)
+
+        var savedBurgerHTML = "<p>" + savedBurger + "</p>";
+    })
 }
 
 async function generateCharInfo(){
@@ -40,5 +47,7 @@ async function generateCharInfo(){
     characterInfoPanel.innerHTML = characterHTML;
 }
 
+
 burgerBtnEl.addEventListener("click", generateBurgeroftheDay);
 charBtnEl.addEventListener("click", generateCharInfo);
+
