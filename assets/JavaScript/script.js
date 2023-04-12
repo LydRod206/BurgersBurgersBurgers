@@ -24,9 +24,12 @@ function generateBurgeroftheDay(){
     })
     .then(function(data){
         console.log(data)
-        const randomIndex = Math.floor(Math.random() * data.length);
+        console.log(data[0].description)
+        const randomIndex = data[Math.floor(Math.random() * data.length)];
+        console.log(randomIndex)
         const burger = data[randomIndex];
-        const burgerName = burger.burgerName;
+        const burgerName = data.burger_name;
+        console.log(burgerName)
         const ingredients = burger.ingredients;
         const description = burger.description;
         const image = burger.image;
@@ -39,34 +42,30 @@ function generateBurgeroftheDay(){
     }); 
 
     }
-
+    function generateCharInfo(){
+        fetch(characterAPI).then(function(response){
+            return response.json ();
+        })
+        .then(function(data){
+            console.log(data.name)
+        const randomIndex = data[Math.floor(Math.random() * data.length)];
+            const character = data[randomIndex];
+            const Name = character.name;
+            const age = character.age;
+            const FirstEP = character.FirstEP;
+            const VoiceA = character.VoiceA;
+    
+            nameEl.textContent = Name;
+            ageEl.textContent = age;
+            firstEpEl.textContent = FirstEP;
+            voiceEl.textContent = VoiceA; 
+        });    
+    }
+    
 document.addEventListener("DOMContentLoaded", () => {
-function generateCharInfo(){
-    fetch(characterAPI).then(function(response){
-        return response.json ();
-    })
-    .then(function(data){
-        console.log(data)
+    console.log("testing")
+})
 
-    const randomIndex = Math.floor(Math.random() * data.length);
-        const character = data[randomIndex];
-        const Name = character.name;
-        const age = character.age;
-        const FirstEP = character.FirstEP;
-        const VoiceA = character.VoiceA;
-
-        nameEl.textContent = Name;
-        ageEl.textContent = age;
-        firstEpEl.textContent = FirstEP;
-        voiceEl.textContent = VoiceA; 
-    });    
-}
-<<<<<<< HEAD
-});
-burgerBtnEl.addEventListener("click", generateBurgeroftheDay);
-charBtnEl.addEventListener("click", generateCharInfo);
-=======
 
 burgerBtnEl.addEventListener("click", generateBurgeroftheDay());
 charBtnEl.addEventListener("click", generateCharInfo());
->>>>>>> dev
