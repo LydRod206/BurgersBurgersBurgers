@@ -8,29 +8,65 @@
         <link rel="stylesheet" href="./assets/style.css">
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/purecss@3.0.0/build/pure-min.css" integrity="sha384-X38yfunGUhNzHpBaEBsWLO+A0HDYOQi8ufWDkZ0k9e0eXz/tH3II7uKZ9msv++Ls" crossorigin="anonymous">
         <link rel="stylesheet" href="./assets/stylesheet.css">
-        <title>BOBS BURGERS INFO</title>
+        <title>BOBS BURGERS</title>
     </head>
     
     <body> 
-        <div class="container">
-            <div id="container__col-1">
-                <h3 id="firstTitle">BOB'S BURGERS <br>CHARACTERS</h3>
-                <div id="Character">
-                    
+        <!-- MAMA BOX -->
+        <div id="generator-container" class="container">
+            <!-- Baby #1 that holds anything in the left hand column like..........-->
+            <div id="character-container" class="container__col-1">
+                <!-- A Title......and..... -->
+                <h1 id="char-title" class="firstTitle">BOB'S BURGERS <br>CHARACTERS</h1>
+                <!-- A "card" that holds all the character info -->
+                <div id="Character" class="box-panels">
+                    <div id="character-info-panel" class="asl">
+                    </div>
                 </div>
+                <!-- This baby also has a button in it -->
                 <div class="Generate-btn-area">
                     <button id="character-btn"class="pure-button" >Generate Random Character</button>
                 </div>
             </div> 
-            <div id="container__col-2">
-                <h3 id="secondTitle">LETS GET THIS PATTY STARTED!</h3>
-                <div id="recipe">
-                    
+            <!-- Baby #2 that holds anything in the right hand column like............... -->
+            <div id="burger-container" class="container__col-2">
+                <!-- A title.....and..... -->
+                <h1 id="burg-title" class="secondTitle">LETS GET THIS PATTY <br>STARTED!</h1>
+                <!-- A "card" that holds all the burger recipes -->
+                <div id="recipe" class="box-panels">
+                    <div id="burger-info-panel" class="wheresthebeef">
+                    </div>
                 </div>
+                <!-- This baby also has two buttons in it. One generater button and one save button -->
                 <div class="Generate-btn-area">
                     <button id="burger-btn" class="pure-button">Generate A Burger Of The Day</button>
-                    <button id="save-btn" class="pure-button">SAVE</button>
+                    <button id="save-btn" class="pure-button">Save</button>
                 </div>
+            </div>
+        </div>
+
+        <!-- This is the Main starting window panel -->
+        <div id="start-container" class="colContainer">
+            <h1 class="welcome">BOB'S BURGERS RANDOM GENERATOR</h1>
+            <div id="openingmessage" class="box-panels">
+                <p>Would you rather have a lifetime of regret, or an afternoon of mild disappointment?
+                    Either way this is the app for you! <br>Come waste your life away clicking endlessly through Bob's Burgers Characters. And while you're here take a look at some of the famous "Burgers Of The Day" from the show. See a burger you would like to make? No problem, just push the save button and that burger is yours!
+                </p>
+            </div>
+            <div class="Generate-btn-area">
+                <button id="getstarted-btn"class="pure-button" >Lets get going...</button>
+            </div>
+        </div>
+
+        <!-- This is the Save screen that will show you your saved info -->
+        <div id="saveburger-container" class="colContainer">
+            <h1 id="saved">Saved Burgers For Later</h1>
+            <div id="savedbox" class="box-panels">
+                <p>This is where we will be disssplaying the saved burger information</p>
+            </div>
+            <div class="Generate-btn-area">
+                <button id="goback-btn" class="pure-button" >Start Over</button>
+                <button id="clear-btn" class="pure-button">Clear Storage</button>
             </div>
         </div>
         <script src="./assets/JavaScript/script.js"></script>
