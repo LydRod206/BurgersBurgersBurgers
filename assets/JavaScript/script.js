@@ -4,16 +4,40 @@ var burgerAPI =  "https://burgerservice20230409143907.azurewebsites.net/burger/B
 // button elements
 const burgerBtnEl = document.getElementById("burger-btn");
 const charBtnEl = document.getElementById("character-btn");
+const startBtnEl = document.getElementById("getstarted-btn");
+const saveBtnEl = document.getElementById("save-btn");
+const backBtnEl = document.getElementById("goback-btn");
+const clearBtnEl = document.getElementById("clear-btn");
 
 // character and burger info panels
+const generatorContainer = document.getElementById("generator-container");
+const startContainer = document.getElementById("start-container");
+const saveContainer = document.getElementById("saveburger-container");
+
 const characterInfoPanel = document.getElementById("character-info-panel");
 const burgerInfoPanel = document.getElementById("burger-info-panel");
+
+// Function that gets fired when the browser is ready and loaded
+window.onload = (event) => {
+    startRoutine();
+};
 
 // //FUNCTIONS
 async function getapidata(url) {
     const response = await fetch(url);
     var data = await response.json();
     return data;
+}
+
+function startRoutine() {
+    generatorContainer.style.display = "none";
+    saveContainer.style.display = "none";
+    startContainer.style.display = "flex";
+}
+
+function startGenerator() {
+    startContainer.style.display = "none";
+    generatorContainer.style.display = "flex";
 }
 
 async function generateCharInfo(){
@@ -40,5 +64,20 @@ async function generateBurgeroftheDay(){
     burgerInfoPanel.innerHTML = burgerHTML;
 }
 
+function saveBurger() {
+    characterInfoPanel.innerHTML = "";
+    burgerInfoPanel.innerHTML = "";
+    generatorContainer.style.display = "none";
+    saveContainer.style.display = "flex";
+}
+
+function clearLocalStorage() {
+    alert("This will clear out saved local storage");
+}
+
 burgerBtnEl.addEventListener("click", generateBurgeroftheDay);
 charBtnEl.addEventListener("click", generateCharInfo);
+startBtnEl.addEventListener("click", startGenerator);
+saveBtnEl.addEventListener("click", saveBurger);
+backBtnEl.addEventListener("click", startRoutine);
+clearBtnEl.addEventListener("click", clearLocalStorage);

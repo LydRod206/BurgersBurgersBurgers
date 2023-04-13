@@ -13,13 +13,13 @@
     
     <body> 
         <!-- MAMA BOX -->
-        <div class="container">
+        <div id="generator-container" class="container">
             <!-- Baby #1 that holds anything in the left hand column like..........-->
-            <div id="container__col-1">
+            <div id="character-container" class="container__col-1">
                 <!-- A Title......and..... -->
-                <h1 id="firstTitle">BOB'S BURGERS <br>CHARACTERS</h1>
+                <h1 id="char-title" class="firstTitle">BOB'S BURGERS <br>CHARACTERS</h1>
                 <!-- A "card" that holds all the character info -->
-                <div id="Character">
+                <div id="Character" class="box-panels">
                     <div id="character-info-panel" class="asl">
                     </div>
                 </div>
@@ -29,11 +29,11 @@
                 </div>
             </div> 
             <!-- Baby #2 that holds anything in the right hand column like............... -->
-            <div id="container__col-2">
+            <div id="burger-container" class="container__col-2">
                 <!-- A title.....and..... -->
-                <h1 id="secondTitle">LETS GET THIS PATTY <br>STARTED!</h1>
+                <h1 id="burg-title" class="secondTitle">LETS GET THIS PATTY <br>STARTED!</h1>
                 <!-- A "card" that holds all the burger recipes -->
-                <div id="recipe">
+                <div id="recipe" class="box-panels">
                     <div id="burger-info-panel" class="wheresthebeef">
                     </div>
                 </div>
@@ -42,6 +42,31 @@
                     <button id="burger-btn" class="pure-button">Generate A Burger Of The Day</button>
                     <button id="save-btn" class="pure-button">Save</button>
                 </div>
+            </div>
+        </div>
+
+        <!-- This is the Main starting window panel -->
+        <div id="start-container" class="colContainer">
+            <h1 class="welcome">BOB'S BURGERS RANDOM GENERATOR</h1>
+            <div id="openingmessage" class="box-panels">
+                <p>Would you rather have a lifetime of regret, or an afternoon of mild disappointment?
+                    Either way this is the app for you! 
+                </p>
+            </div>
+            <div class="Generate-btn-area">
+                <button id="getstarted-btn"class="pure-button" >Lets get going...</button>
+            </div>
+        </div>
+
+        <!-- This is the Save screen that will show you your saved info -->
+        <div id="saveburger-container" class="colContainer">
+            <h1 id="saved">Saved Burgers For Later</h1>
+            <div id="savedbox" class="box-panels">
+                <p>This is where we will be disssplaying the saved burger information</p>
+            </div>
+            <div class="Generate-btn-area">
+                <button id="goback-btn" class="pure-button" >Start Over</button>
+                <button id="clear-btn" class="pure-button">Clear Storage</button>
             </div>
         </div>
         <script src="./assets/JavaScript/script.js"></script>
