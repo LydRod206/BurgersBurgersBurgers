@@ -1,11 +1,17 @@
-h3 {
+
+/* -----------------------------------------------DESKTOP---------------------------------------------------------- */
+
+/* Both Title Boxes */
+h1 {
     font-family: 'bobs_burgersregular';
     src: url('bobs_burgers-webfont.woff2') format('woff2'),
     url('bobs_burgers-webfont.woff') format('woff');
-    font-weight: 900;
+    font-weight: bolder;
     font-style: normal;
+    color: red;
 }  
 
+/* Background Photo */
 body{
     background-image: url("./bob-s-burgers-zoom-background-lv6r7fn40m79ajrz.jpg");
     background-size: cover;
@@ -14,6 +20,7 @@ body{
     background-color: black;
 }  
 
+/* Big Mama Container */
 .container {
     display: flex;
     flex-direction: row;
@@ -21,67 +28,80 @@ body{
     margin-top: 40px;
     margin-bottom: 5px; 
 }
+/* crazy aunt that is just needed to help out javascript */
+.colContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+} 
 
+/* Mamas Babies */
 .container__col-1 {
     width: auto;
 }
-
 .container__col-2 {
     width: auto;
     text-align: center;
 }
 
- #firstTitle, #secondTitle {
-   font-size: 50px;
+/* Things that both titles have in common */
+ .firstTitle, .secondTitle {
+    font-size: 50px;
     animation: flicker 3.0s infinite alternate;  
-    border: 0.2rem solid red;
-   color: red;
+    border: 0.3rem solid red;
+    color: red;
     padding: 0.4em;
     background-color: rgb(247, 247, 67);  
     text-align: center;
     width: 460px;
-    margin-left: 100px;
+    margin-left: 130px;
+    margin-top: 30px;
 } 
 
-#firstTitle {
-    margin-top: 30px;
-    margin-right: 150px;
+/* The first title just needed a little bit extra */
+.firstTitle {
+    margin-right: 30px;
     height: 120px;
 }
 
-#secondTitle {
+/* welcome page and saved page settings  */
+.welcome, #saved {
+    font-size: 60px;
+    animation: flicker 3.0s infinite alternate;  
+    border: 0.3rem solid red;
+    color: red;
+    padding: 0.4em;
+    background-color: rgb(247, 247, 67);  
+    text-align: center;
+    width: 440px;
     margin-top: 30px;
 }
 
-#character-btn, #burger-btn, #save-btn { 
-    font-size: 35px;  
-    border: 0.2rem solid red;
+/* Things that all buttons have in common */
+#character-btn, #burger-btn, #save-btn, #getstarted-btn, #goback-btn, #clear-btn { 
+    border: 0.3rem solid red;
     border-radius: 2rem;
     padding: 0.4em;  
     background-color: rgb(247, 247, 67);   
     color: red;  
     flex-wrap: wrap;
+    font-size: 25px;
 } 
 
+/* Some special features each button needed */
 #character-btn {
-    font-size: 35px;
-    margin-left: 90px;
-    width: 500px;
+    margin-left: 180px;
+    width: 400px;
 }
-
 #burger-btn {
-    font-size: 35px;
-    width: 550px;
-    margin-left: 40px;
+    width: 400px;
+    margin-left: 140px;
 }
-
-
 #save-btn {
-    font-size: 25px;
     width: 150px;
 }
 
-
+/* NEON SIGN and the flickering to make it look like an actual sign */
 @keyframes flicker {
     0%, 18%, 22%, 25%, 53%, 57%, 100% {
       text-shadow:
@@ -97,12 +117,15 @@ body{
     20%, 24%, 55% {       
       text-shadow: none;
     }
-
 }
 
-#Character, #recipe {
-    width: 500px;
-    height: 400px;
+/* The "cards" inside each baby. The one one the left is the Character box and the right one is the Recipe box */
+#Character, #recipe  {
+    margin-bottom: 30px;
+    margin-left: 100px;
+    text-align: center;
+    width: 550px;
+    height: 500px;
     background-color: rgb(247, 247, 67);
     margin-top: 10px;
     box-shadow: 0 0 .2rem #fff,
@@ -112,162 +135,434 @@ body{
               0 0 2.8rem red,
               inset 0 0 1.3rem red; 
 } 
-
-#recipe {
-    margin-left: 100px;
+/* Welcome message settings */
+#openingmessage {
+    font-size: 25px;
     margin-bottom: 30px;
-    background-color: rgb(247, 247, 67);
+    margin-left: 0px;
     text-align: center;
+    padding-right: 25px;
+    padding-left: 25px;
+    padding-top: 20px;
+    width: 650px;
+    height: 700px;
+    background-color: rgb(247, 247, 67);
+    margin-top: 10px;
+    box-shadow: 0 0 .2rem #fff,
+              0 0 .2rem #fff,
+              0 0 2rem red,
+              0 0 0.8rem red,
+              0 0 2.8rem red,
+              inset 0 0 1.3rem red; 
+}
+
+/* saved box settings */
+#savedbox {
+    margin-bottom: 30px;
+    margin-left: 0px;
+    text-align: center;
+    width: 550px;
+    height: 500px;
+    background-color: rgb(247, 247, 67);
+    margin-top: 10px;
+    box-shadow: 0 0 .2rem #fff,
+              0 0 .2rem #fff,
+              0 0 2rem red,
+              0 0 0.8rem red,
+              0 0 2.8rem red,
+              inset 0 0 1.3rem red; 
+}
+
+/* The recipe box just needed some padding around the description becuase the lines where to long and we wanted them to be more in the middle  */
+#recipe {
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+/* This is the sizing for the burger picture so that they would all be the same size */
+.burgpic {
+    width: 300px;
+    height: 300px;
+}
+
+/* This is the sizing for the characters pictures that come through since all the sizes where different sizes */
+.picperson {
+    width: 200px;
+    height: 300px;
+}
+
+/* This is the class for the characters info */
+.asl {
+    font-size: 15px;
+    width: 255px;
+    height: 350px;
+    line-height: normal;
+    margin-left: 150px;
+    padding-top: 40px;
+}
+
+/* This is the class for the burger recipes */
+.wheresthebeef {
+    font-size: 15px;
+    padding-top: 30px;
 }
 
 
- 
-#Character {
-     margin-bottom: 30px;
-     margin-left:100px;
-     text-align: center;
-}
+/*----------------------------------------------------- TABLET -------------------------------------------------------*/
 
 
-/* tablet */
 @media screen and (max-width:820px) {
+    
+
+    /* Mama in tablet mode */
     .container {
-        margin-left: 65px;
-        margin-top: 35px;
-        flex-direction: column;
-        margin-bottom: 65px;
-        }
-
-    .container__col-1{ 
-        width: auto;
-        }
-
-    .container__col-2{
-        width: auto;
-        }
-
-    #recipe { 
-       width: 300px;
-       height: 300px;
-       margin-bottom: 30px;
-       margin-left:200px;
-        }
-
-    #Character {
-        width: 300px;
-        height: 300px;
-        margin-bottom: 25px;
-        margin-left: 200px;
-        }
-
-    #firstTitle, #secondTitle {
-        font-size: 40px;
-        width: 350px;
-        margin-left: 150px;
-        text-align: center;
-        }
-
-    #firstTitle {
+        margin-left: 0px;
         margin-top: 5px;
+        flex-direction: column;
+        margin-bottom: 5px;
+        display: flex;
+        }
+
+    /* Babies in tablet mode   */
+    .container__col-1, .container__col-2{ 
+        width: auto;
+        }
+
+    /*crazy aunt that is just needed to help javascript  */
+    .colContainer { 
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        }
+
+    /* The "cards" inside each baby. The one one the left is the Character box and the right one is the Recipe box */
+    #Character, #recipe {
         margin-bottom: 30px;
-        margin-right: 0;
-        height: 75px;
+        margin-left: 100px;
+        text-align: center;
+        width: 550px;
+        height: 500px;
+        background-color: rgb(247, 247, 67);
+        margin-top: 10px;
+        box-shadow: 0 0 .2rem #fff,
+                      0 0 .2rem #fff,
+                      0 0 2rem red,
+                      0 0 0.8rem red,
+                      0 0 2.8rem red,
+                      inset 0 0 1.3rem red; 
+        } 
+
+    /* The welcome and saved title settings */
+    .welcome, #saved {
+        font-size: 90px;
+        animation: flicker 3.0s infinite alternate;  
+        border: 0.3rem solid red;
+        color: red;
+        padding: 0.4em;
+        background-color: rgb(247, 247, 67);  
+        text-align: center;
+        width: 640px;
+        height: 100px;
+        margin-top: 60px;
+        margin-right: 1px;
+        padding-top: 20px;
+        margin-bottom: 100px;
+        }
+  
+    /* Welcome message settings */  
+    #openingmessage {
+        margin-left: 15px;
+        margin-top: 20px;
+        height: 435px;
+        width: 600px;
+        margin-bottom: 100px;
+        font-size: 19px;
+        padding-right: 30px;
+        padding-left: 30px;
+        }
+    /* saved box settings */
+    #savedbox {
+        margin-bottom: 90px;
+        font-size: 25px;
+        margin-left: 0px;
+        text-align: center;
+        width: 600px;
+        padding-right: 20px;
+        padding-left:20px; 
+        height: 560px;
+        background-color: rgb(247, 247, 67);
+        margin-top: 50px;
+        box-shadow: 0 0 .2rem #fff,
+                          0 0 .2rem #fff,
+                          0 0 2rem red,
+                          0 0 0.8rem red,
+                          0 0 2.8rem red,
+                          inset 0 0 1.3rem red; 
         }
 
-    #secondTitle {
-        margin-top: 30px;
-        width:350px;
-        margin-bottom: 30px; 
+    /* Burger box */
+    #recipe { 
+       width: 500px;
+       height: 480px;
+       margin-bottom: 30px;
+       margin-left:110px;
+       padding-top: 30px;
         }
 
+    /* Character box */
+    #Character {
+        width: 500px;
+        height: 570px;
+        margin-bottom: 25px;
+        margin-left: 150px;
+        padding-top: 25px;
+        }
+
+    /* Both Title Boxes in tablet mode */
+    .firstTitle, .secondTitle {
+        font-size: 45px;
+        text-align: center;
+        margin-top: 5px;
+        height: 100px;
+        margin-bottom: 30px;
+        width: 400px;
+        margin-left: 170px;
+        padding-bottom: 10px;
+        }           
+
+     /* Six buttons in tablet mode  */
     #character-btn { 
         font-size: 30px; 
         margin-left: 180px;
-        width: 350px;
-        margin-bottom: 30px;
-       } 
-
+        width: 450px;
+        margin-bottom: 40px;
+       }
     #burger-btn {
        font-size: 30px;
-       width: 350px;
-       margin-left: 120px;
-    }
-
+       width: 450px;
+       margin-left: 20px;
+        }
     #save-btn {
         font-size: 30px;
-        width: 100px;
+        width: 250px;
+        }
+
+    #getstarted-btn{
+        margin-right: 50px;
+        margin-bottom: 455px;
+        margin-top: 30px;
+        width: 300px;
+    } 
+    #goback-btn, #clear-btn {
+        margin-bottom: 100px;
     }
+  
+
+    /*Burger Picture and Character Picture in tablet mode  */
+    .burgpic {
+        width: 200px;
+        height: 200px;
+        }
+    .picperson {
+        width: 200px;
+        height: 350px;
+        }
+
+    /* Character section in tablet mode */
+    .asl {
+        font-size: 18px;
+        width: 350px;
+        height: 250px;
+        line-height: normal;
+        margin-left: 60px;
+        padding-top: 5px;
+        
+    }
+    /* Burger Picture in tablet mode */
+    .wheresthebeef {
+        font-size: 20px;
+        padding-top: 2px;
+        }
 }
 
 
 
-/* phone */
+/*--------------------------------------------------- PHONE ------------------------------------------------------- */
+
+
 @media screen and (max-width: 768px){ 
+
+    /* Mama in phone mode */
     .container{
-        margin-left: 25px;
+        margin-left: 35px;
         margin-top: 10px;
         flex-direction: column;
         margin-bottom: 10px; 
+        display:flex;
     }
 
-    .container__col-1{ 
+    /* Babies in phone mode */
+    .container__col-1, .container__col-2{ 
         width: auto;
     }
 
-    .container__col-2{
-        width: auto;
-    } 
-
-    #recipe { 
-       width: 200px;
-       height: 200px;
-       margin-bottom: 20px;
-       margin-left: 75px;
+    /* crazy aunt that is just needed to help javascript */
+    .colContainer { 
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        height: 844px;
     }
 
-    #Character {
-        width: 200px;
-        height: 200px;
-        margin-bottom: 20px;
-        margin-left: 75px;
-    }
-    
-    #firstTitle, #secondTitle {
-        font-size: 30px;
+    /* settings for the welcome title and the saved title */
+    .welcome, #saved {
+        font-size: 55px;
+        margin-bottom: 10px;
+        margin-left: 10px;
+        text-align: center;
         width: 250px;
-        margin-left: 30px;      
-    }
-    #firstTitle {
-        margin-top: 1px;
-        margin-bottom: 20px;
-        margin-right: 0;
-        height: 50px;
+        margin-top: 60px;
+        margin-right: 1px;
+        padding-top: 10px;
+        height: 100px;
+        color: red;
+        border: 0.3rem solid red;
+        padding-top: 20px;
+        background-color: rgb(247, 247, 67);
+        animation: flicker 3.0s infinite alternate;  
+        box-shadow: 0 0 .2rem #fff,
+                      0 0 .2rem #fff,
+                      0 0 2rem red,
+                      0 0 0.8rem red,
+                      0 0 2.8rem red,
+                      inset 0 0 1.3rem red; 
     }
 
-    #secondTitle {
-        margin-top: 1px;
-        width:250px;
-        margin-bottom: 20px;
+    /* settings for the welcome message box */
+    #openingmessage {
+        margin-left: 10px;
+        margin-top: 30px;
+        width: 290px;
+        font-size: 12px;
+        padding-left: 20px;
+        padding-right: 20px;
+        padding-top: 0px;
     }
 
-    #character-btn { 
-        font-size: 25px; 
-        margin-left: 15px;
+    /* settings for the saved burger box */
+    #savedbox {
+        margin-bottom: 30px;
+        margin-left: 0px;
+        text-align: center;
+        padding-right: 10px;
+        font-size: 17px;
+        padding-left: 10px;
         width: 300px;
+        height: 350px;
+        background-color: rgb(247, 247, 67);
+        margin-top: 50px;
+        box-shadow: 0 0 .2rem #fff,
+                      0 0 .2rem #fff,
+                      0 0 2rem red,
+                      0 0 0.8rem red,
+                      0 0 2.8rem red,
+                      inset 0 0 1.3rem red;    
+    }
+  
+    /* Burger box in phone mode */
+    #recipe { 
+       width: 250px;
+       height: 280px;
+       margin-bottom: 20px;
+       margin-left: 0;
+    }
+
+    /* Character box in phone mode */
+    #Character {
+        width: 300px;
+        height: 250px;
+        margin-bottom: 10px;
+        margin-left: 0px;
+    }
+
+    /* Both titles in phone mode */
+    .firstTitle, .secondTitle {
+        font-size: 20px;
+        width: 200px;
+        margin-left: 45px; 
+        margin-bottom: 10px;   
+        height: 40px; 
+    }
+
+    /*  Extra features each title needed */
+    .firstTitle {
+        margin-top: 0px;
+        padding-top: 3px;
+    }
+    .secondTitle {
+        margin-top: 1px;
+       margin-right: 25px;
+    }
+
+    /* The generator buttons in phone mode */
+    #character-btn {
+        font-size: 15px; 
+        margin-left: 30px;
+        width: 250px;
         margin-bottom: 20px;
+    }
+    #burger-btn {
+        font-size: 15px; 
+        margin-left: 0px;
+        width: 250px;
+        margin-bottom: 20px;
+        align-items: center;
+        margin-right: 50px;
+    }
+
+    /* Save button in phone mode */
+    #save-btn {
+        font-size: 15px;
+        width: 80px;
+        /* margin-left: 100px; */
+        margin-top: 5px;
+        margin-right: 50px;
+    }
+
+    /* start button settings */
+    #getstarted-btn{
+        margin-right: 10px;
+        margin-bottom: 55px;
+        margin-top: 30px;
+        width: 200px;
     } 
 
-    #burger-btn {
-       font-size: 25px;
-       width: 300px;
-       margin-left: 15px;
-       margin-bottom: 10px;
+    /* Burger picture settings in phone mode */
+    .burgpic {
+        width: 100px;
+        height: 100px;
     }
 
-    #save-btn {
-        font-size: 25px;
+    /* Character picture settings in phone mode */
+    .picperson {
         width: 100px;
-        margin-left: 120px;
-        margin-top: 5px;
+        height: 150px; 
+    }
+
+    /* Character info in phone mode */
+    .asl {
+        font-size: 12px;
+        width: 280px;
+        height: 250px;
+        line-height: 0%;
+        margin-left: 0;
+        padding-top:10px; 
+    }
+
+    /* Burger description in phone mode */
+    .wheresthebeef {
+        font-size: 11px;
+        padding-top: 10px;
+        
     }
 }
