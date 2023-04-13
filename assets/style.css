@@ -28,13 +28,12 @@ body{
     margin-top: 40px;
     margin-bottom: 5px; 
 }
+/* crazy aunt that is just needed to help out javascript */
 .colContainer {
     display: flex;
     flex-direction: column;
     align-items: center;
 } 
-
-
 
 /* Mamas Babies */
 .container__col-1 {
@@ -65,9 +64,9 @@ body{
     height: 120px;
 }
 
-
+/* welcome page and saved page settings  */
 .welcome, #saved {
-    font-size: 50px;
+    font-size: 60px;
     animation: flicker 3.0s infinite alternate;  
     border: 0.3rem solid red;
     color: red;
@@ -78,9 +77,7 @@ body{
     margin-top: 30px;
 }
 
-
-
-/* Things that all buttons had in common */
+/* Things that all buttons have in common */
 #character-btn, #burger-btn, #save-btn, #getstarted-btn, #goback-btn, #clear-btn { 
     border: 0.3rem solid red;
     border-radius: 2rem;
@@ -122,7 +119,7 @@ body{
     }
 }
 
-/* Things the Big Boxes. The one one the left is the Character box and the right one is the Recipe box */
+/* The "cards" inside each baby. The one one the left is the Character box and the right one is the Recipe box */
 #Character, #recipe  {
     margin-bottom: 30px;
     margin-left: 100px;
@@ -138,16 +135,17 @@ body{
               0 0 2.8rem red,
               inset 0 0 1.3rem red; 
 } 
-
+/* Welcome message settings */
 #openingmessage {
-    font-size: 30px;
+    font-size: 25px;
     margin-bottom: 30px;
     margin-left: 0px;
     text-align: center;
     padding-right: 25px;
     padding-left: 25px;
-    width: 550px;
-    height: 500px;
+    padding-top: 20px;
+    width: 650px;
+    height: 700px;
     background-color: rgb(247, 247, 67);
     margin-top: 10px;
     box-shadow: 0 0 .2rem #fff,
@@ -158,6 +156,7 @@ body{
               inset 0 0 1.3rem red; 
 }
 
+/* saved box settings */
 #savedbox {
     margin-bottom: 30px;
     margin-left: 0px;
@@ -172,7 +171,6 @@ body{
               0 0 0.8rem red,
               0 0 2.8rem red,
               inset 0 0 1.3rem red; 
-
 }
 
 /* The recipe box just needed some padding around the description becuase the lines where to long and we wanted them to be more in the middle  */
@@ -229,12 +227,15 @@ body{
     .container__col-1, .container__col-2{ 
         width: auto;
         }
+
+    /*crazy aunt that is just needed to help javascript  */
     .colContainer { 
         display: flex;
         flex-direction: column;
         align-items: center;
-    }
+        }
 
+    /* The "cards" inside each baby. The one one the left is the Character box and the right one is the Recipe box */
     #Character, #recipe {
         margin-bottom: 30px;
         margin-left: 100px;
@@ -251,8 +252,9 @@ body{
                       inset 0 0 1.3rem red; 
         } 
 
+    /* The welcome and saved title settings */
     .welcome, #saved {
-        font-size: 70px;
+        font-size: 90px;
         animation: flicker 3.0s infinite alternate;  
         border: 0.3rem solid red;
         color: red;
@@ -260,33 +262,34 @@ body{
         background-color: rgb(247, 247, 67);  
         text-align: center;
         width: 640px;
-        height: 130px;
+        height: 100px;
         margin-top: 60px;
         margin-right: 1px;
         padding-top: 20px;
         margin-bottom: 100px;
         }
-        
+  
+    /* Welcome message settings */  
     #openingmessage {
         margin-left: 15px;
         margin-top: 20px;
-        height: 335px;
+        height: 435px;
         width: 600px;
         margin-bottom: 100px;
-        font-size: 25px;
-        padding-right: 20px;
-        padding-left: 20px;
+        font-size: 19px;
+        padding-right: 30px;
+        padding-left: 30px;
         }
-
+    /* saved box settings */
     #savedbox {
-        margin-bottom: 30px;
-        font-size: 23px;
+        margin-bottom: 90px;
+        font-size: 25px;
         margin-left: 0px;
         text-align: center;
-        width: 650px;
+        width: 600px;
         padding-right: 20px;
         padding-left:20px; 
-        height: 510px;
+        height: 560px;
         background-color: rgb(247, 247, 67);
         margin-top: 50px;
         box-shadow: 0 0 .2rem #fff,
@@ -295,8 +298,8 @@ body{
                           0 0 0.8rem red,
                           0 0 2.8rem red,
                           inset 0 0 1.3rem red; 
-            
         }
+
     /* Burger box */
     #recipe { 
        width: 500px;
@@ -327,7 +330,7 @@ body{
         padding-bottom: 10px;
         }           
 
-     /* Three buttons in tablet mode  */
+     /* Six buttons in tablet mode  */
     #character-btn { 
         font-size: 30px; 
         margin-left: 180px;
@@ -350,6 +353,9 @@ body{
         margin-top: 30px;
         width: 300px;
     } 
+    #goback-btn, #clear-btn {
+        margin-bottom: 100px;
+    }
   
 
     /*Burger Picture and Character Picture in tablet mode  */
@@ -394,11 +400,13 @@ body{
         margin-bottom: 10px; 
         display:flex;
     }
+
     /* Babies in phone mode */
     .container__col-1, .container__col-2{ 
         width: auto;
     }
 
+    /* crazy aunt that is just needed to help javascript */
     .colContainer { 
         display: flex;
         flex-direction: column;
@@ -406,8 +414,9 @@ body{
         height: 844px;
     }
 
+    /* settings for the welcome title and the saved title */
     .welcome, #saved {
-        font-size: 35px;
+        font-size: 55px;
         margin-bottom: 10px;
         margin-left: 10px;
         text-align: center;
@@ -418,7 +427,7 @@ body{
         height: 100px;
         color: red;
         border: 0.3rem solid red;
-        padding-top: 30px;
+        padding-top: 20px;
         background-color: rgb(247, 247, 67);
         animation: flicker 3.0s infinite alternate;  
         box-shadow: 0 0 .2rem #fff,
@@ -429,23 +438,24 @@ body{
                       inset 0 0 1.3rem red; 
     }
 
+    /* settings for the welcome message box */
     #openingmessage {
         margin-left: 10px;
-        margin-top: 60px;
-        height: 250px;
-        width: 330px;
-        font-size: 15px;
-        padding-left: 10px;
-        padding-right: 10px;
+        margin-top: 30px;
+        width: 290px;
+        font-size: 12px;
+        padding-left: 20px;
+        padding-right: 20px;
+        padding-top: 0px;
     }
 
-
-
+    /* settings for the saved burger box */
     #savedbox {
         margin-bottom: 30px;
         margin-left: 0px;
         text-align: center;
         padding-right: 10px;
+        font-size: 17px;
         padding-left: 10px;
         width: 300px;
         height: 350px;
@@ -456,11 +466,9 @@ body{
                       0 0 2rem red,
                       0 0 0.8rem red,
                       0 0 2.8rem red,
-                      inset 0 0 1.3rem red; 
-        
+                      inset 0 0 1.3rem red;    
     }
   
-   
     /* Burger box in phone mode */
     #recipe { 
        width: 250px;
@@ -503,7 +511,6 @@ body{
         width: 250px;
         margin-bottom: 20px;
     }
-
     #burger-btn {
         font-size: 15px; 
         margin-left: 0px;
@@ -513,7 +520,6 @@ body{
         margin-right: 50px;
     }
 
-    
     /* Save button in phone mode */
     #save-btn {
         font-size: 15px;
@@ -523,10 +529,10 @@ body{
         margin-right: 50px;
     }
 
-
+    /* start button settings */
     #getstarted-btn{
         margin-right: 10px;
-        margin-bottom: 255px;
+        margin-bottom: 55px;
         margin-top: 30px;
         width: 200px;
     } 
