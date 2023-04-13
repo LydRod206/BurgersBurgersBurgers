@@ -140,9 +140,12 @@ body{
 } 
 
 #openingmessage {
+    font-size: 30px;
     margin-bottom: 30px;
     margin-left: 0px;
     text-align: center;
+    padding-right: 25px;
+    padding-left: 25px;
     width: 550px;
     height: 500px;
     background-color: rgb(247, 247, 67);
@@ -248,41 +251,45 @@ body{
                       inset 0 0 1.3rem red; 
         } 
 
-        .welcome, #saved {
-            font-size: 70px;
-            animation: flicker 3.0s infinite alternate;  
-            border: 0.3rem solid red;
-            color: red;
-            padding: 0.4em;
-            background-color: rgb(247, 247, 67);  
-            text-align: center;
-            width: 640px;
-            height: 130px;
-            margin-top: 60px;
-            margin-right: 1px;
-            padding-top: 20px;
-            margin-bottom: 100px;
-
-           
+    .welcome, #saved {
+        font-size: 70px;
+        animation: flicker 3.0s infinite alternate;  
+        border: 0.3rem solid red;
+        color: red;
+        padding: 0.4em;
+        background-color: rgb(247, 247, 67);  
+        text-align: center;
+        width: 640px;
+        height: 130px;
+        margin-top: 60px;
+        margin-right: 1px;
+        padding-top: 20px;
+        margin-bottom: 100px;
         }
         
-        #openingmessage {
-            margin-left: 15px;
-            margin-top: 20px;
-            height: 335px;
-            width: 600px;
-            margin-bottom: 100px;
+    #openingmessage {
+        margin-left: 15px;
+        margin-top: 20px;
+        height: 335px;
+        width: 600px;
+        margin-bottom: 100px;
+        font-size: 25px;
+        padding-right: 20px;
+        padding-left: 20px;
         }
 
-        #savedbox {
-                margin-bottom: 30px;
-                margin-left: 0px;
-                text-align: center;
-                width: 650px;
-                height: 510px;
-                background-color: rgb(247, 247, 67);
-                margin-top: 50px;
-                box-shadow: 0 0 .2rem #fff,
+    #savedbox {
+        margin-bottom: 30px;
+        font-size: 23px;
+        margin-left: 0px;
+        text-align: center;
+        width: 650px;
+        padding-right: 20px;
+        padding-left:20px; 
+        height: 510px;
+        background-color: rgb(247, 247, 67);
+        margin-top: 50px;
+        box-shadow: 0 0 .2rem #fff,
                           0 0 .2rem #fff,
                           0 0 2rem red,
                           0 0 0.8rem red,
@@ -290,11 +297,6 @@ body{
                           inset 0 0 1.3rem red; 
             
         }
-      
-         
-     
-    
-
     /* Burger box */
     #recipe { 
        width: 500px;
@@ -404,8 +406,6 @@ body{
         height: 844px;
     }
 
-
-
     .welcome, #saved {
         font-size: 35px;
         margin-bottom: 10px;
@@ -432,21 +432,26 @@ body{
     #openingmessage {
         margin-left: 10px;
         margin-top: 60px;
-        height: 150px;
+        height: 250px;
         width: 330px;
+        font-size: 15px;
+        padding-left: 10px;
+        padding-right: 10px;
     }
 
 
 
     #savedbox {
-            margin-bottom: 30px;
-            margin-left: 0px;
-            text-align: center;
-            width: 300px;
-            height: 250px;
-            background-color: rgb(247, 247, 67);
-            margin-top: 50px;
-            box-shadow: 0 0 .2rem #fff,
+        margin-bottom: 30px;
+        margin-left: 0px;
+        text-align: center;
+        padding-right: 10px;
+        padding-left: 10px;
+        width: 300px;
+        height: 350px;
+        background-color: rgb(247, 247, 67);
+        margin-top: 50px;
+        box-shadow: 0 0 .2rem #fff,
                       0 0 .2rem #fff,
                       0 0 2rem red,
                       0 0 0.8rem red,

@@ -16,6 +16,11 @@ const saveContainer = document.getElementById("saveburger-container");
 
 const characterInfoPanel = document.getElementById("character-info-panel");
 const burgerInfoPanel = document.getElementById("burger-info-panel");
+const saveInfoPanel = document.getElementById("savedbox");
+
+// Couple variables to hold on to the id of the selected character and burger
+var characterData;
+var burgerData;
 
 // Function that gets fired when the browser is ready and loaded
 window.onload = (event) => {
@@ -43,9 +48,10 @@ function startGenerator() {
 async function generateCharInfo(){
     // we want to get a random character from 1 to 506, 506 is the length of characters from the characters api
     var random = Math.floor(Math.random() * 506) + 1;
-    const characterData = await getapidata(characterAPI + random);
+    characterData = await getapidata(characterAPI + random);
     console.log(characterData);
 
+    // lets display the randomly generated character
     var characterHTML = "<img class='picperson' src='" + characterData.image + "'/>";
     characterHTML += "<h4>Name: " + characterData.name + "</h4>";
     characterHTML += "<h4>First Episode: " + characterData.firstEpisode + "</h4>";
@@ -54,10 +60,12 @@ async function generateCharInfo(){
 }
 
 async function generateBurgeroftheDay(){
+    // lets get a random burger from the burger api
     var random = Math.floor(Math.random() * 10) + 1;
-    const burgerData = await getapidata(burgerAPI + random);
+    burgerData = await getapidata(burgerAPI + random);
     console.log(burgerData);
 
+    // lets display the randomly generated burger
     var burgerHTML = "<img class='burgpic' src='" + burgerData.image + "'/>";
     burgerHTML += "<h2>" + burgerData.burger_name + "</h2>";
     burgerHTML += "<p>" + burgerData.description + "</p>";
@@ -65,14 +73,35 @@ async function generateBurgeroftheDay(){
 }
 
 function saveBurger() {
+    // lets first save all selected details to local storage
+    localStorage.removeItem("savedBurger");
+    const savedData = {
+        character: characterData,
+        burger: burgerData
+    }
+    localStorage.setItem("savedBurger", JSON.stringify(savedData));
+
+    //populate save panel with saved details
+    var saveHTML = "<img class='burgpic' src='" + burgerData.image + "'/>";
+    saveHTML += "<h2>" + burgerData.burger_name + "</h2>";
+    saveHTML += "<p>" + burgerData.description + "</p>";
+    saveInfoPanel.innerHTML = saveHTML;
+
+    // now lets clear the generator panels of the details
     characterInfoPanel.innerHTML = "";
     burgerInfoPanel.innerHTML = "";
+    // clear the data objects as well
+    characterData = null;
+    burgerData = null;
+
+    // hide the generator panel and display save panel
     generatorContainer.style.display = "none";
     saveContainer.style.display = "flex";
 }
 
 function clearLocalStorage() {
-    alert("This will clear out saved local storage");
+    saveInfoPanel.innerHTML = "";
+    localStorage.clear();
 }
 
 burgerBtnEl.addEventListener("click", generateBurgeroftheDay);
